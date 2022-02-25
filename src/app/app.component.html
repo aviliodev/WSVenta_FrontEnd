@@ -1,0 +1,12 @@
+<mat-drawer-container>
+   <mat-drawer #drawer mode="side"> <!--el #drawer (puede ser cualquier palabra peor con #) lo usamos como id de la etiqueta mat-drawer) -->
+     <a [routerLink]="['/home']">Inicio</a> <!--routerLink es una funcionalidad que ya trae Angular, para poder linkear una ruta -->
+    <a [routerLink]="['/cliente']">Cliente</a>
+  </mat-drawer>
+  <div>
+     <button (click)="drawer.toggle()">Show/Hide</button> <!--aquí drawer es el id #drawer que se creó para mat-drawer y poder controlarlo -->
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
+
+
