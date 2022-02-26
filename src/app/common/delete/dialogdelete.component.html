@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Delete</h1>
+<div mat-dialog-content>
+    <h3>Are you shure to delete the item?</h3>
+</div>
+<!-- cdkFocusInitial es una propiedad que indica dónde estará el foco inicial -->
+<!-- [mat-dialog-close] se usa para mandar un estado al cerrarse. En este caso, 
+     Manda true cuando se hace delete y false cuando se cancela-->
+<div mat-dialog-actions>
+    <button mat-raised-button cdkFocusInitial [mat-dialog-close]="false">Cancel</button>
+    <button color="warn" mat-raised-button [mat-dialog-close]="true">Delete</button>
+</div>

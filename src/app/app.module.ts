@@ -17,13 +17,15 @@ import { HomeComponent } from './home/home.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import {HttpClientModule} from '@angular/common/http';
 import {DialogClienteComponent} from './cliente/dialog/dialogcliente.component'
+import { DialogDeleteComponent } from './common/delete/dialogdelete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ClienteComponent,
-    DialogClienteComponent
+    DialogClienteComponent,
+    DialogDeleteComponent
   ],
   imports: [
     BrowserModule,

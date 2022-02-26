@@ -15,7 +15,7 @@ const httpOption = {
   providedIn: 'root'
 })
 export class ApiclienteService {
-  apiURL = 'https://localhost:7003/api/Cliente';
+  apiURL = 'https://localhost:7003/api/cliente';
   
   constructor(
     private _http : HttpClient
@@ -27,6 +27,12 @@ export class ApiclienteService {
 
   addCliente(cliente: Client): Observable<Response> {
     return this._http.post<Response>(this.apiURL,cliente, httpOption);
+  }
+  editCliente(cliente: Client): Observable<Response> {
+    return this._http.put<Response>(this.apiURL,cliente, httpOption);
+  }
+  delCliente(id: number): Observable<Response> {
+    return this._http.delete<Response>(`${this.apiURL}/${id}`);
   }
 
 
